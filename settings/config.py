@@ -1,9 +1,10 @@
 import os.path
 # Импортируем модуль emoji для отображения эмоджи
 from emoji import emojize
+from decouple import config
 
 # Токен выдается при регистрации бота в BotFather
-TOKEN = ''
+TOKEN = config('TOKEN')
 # База данных
 NAME_DB = 'products.db'
 # Версия приложения
