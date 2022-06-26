@@ -3,7 +3,7 @@ import os.path
 from emoji import emojize
 
 # Токен выдается при регистрации бота в BotFather
-TOKEN = '5213381374:AAG_Ts31nf8R0ihHfhYHg4ykAKrOgaqw_Hs'
+TOKEN = ''
 # База данных
 NAME_DB = 'products.db'
 # Версия приложения
