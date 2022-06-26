@@ -1,11 +1,13 @@
 import os
-import os.path
 # Импортируем модуль emoji для отображения эмоджи
 from emoji import emojize
 from decouple import config
 
 # Токен выдается при регистрации бота в BotFather
-TOKEN = os.getenv('TOKEN')
+if os.name == 'nt':
+    TOKEN = config('TOKEN')
+else:
+    TOKEN = os.getenv('TOKEN')
 # База данных
 NAME_DB = 'products.db'
 # Версия приложения
@@ -54,3 +56,7 @@ COMMANDS = {
     'START': 'start',
     'HELP': 'help',
 }
+
+
+if __name__ == '__main__':
+    print(TOKEN)

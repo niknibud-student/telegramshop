@@ -1,5 +1,6 @@
-from typing import List, Tuple
-from data_base.dbalchemy import DBManager
+from typing import List, Tuple, TYPE_CHECKING
+if TYPE_CHECKING:
+    from data_base.dbalchemy import DBManager
 
 
 def convert(list_convert: List[Tuple]) -> List:
@@ -33,7 +34,7 @@ def total_quantity(list_quantity: List) -> int:
     return sum(list_quantity)
 
 
-def get_total_sum(bd: DBManager) -> float:
+def get_total_cost(bd: 'DBManager') -> float:
     """
     Возвращает общую стоимость заказа
 
@@ -50,7 +51,7 @@ def get_total_sum(bd: DBManager) -> float:
     return total_cost(quantities, prices)
 
 
-def get_total_quantity(bd: DBManager) -> int:
+def get_total_quantity(bd: 'DBManager') -> int:
     """
     Возвращает общее количество заказанного товара
 
